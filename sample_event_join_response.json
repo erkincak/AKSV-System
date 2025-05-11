@@ -1,0 +1,6 @@
+{
+  "message": "Volunteer joined event successfully.",
+  "eventId": "event123",
+  "userId": "user123",
+  "selectedTimeSlots": ["09:00-11:00"]
+}

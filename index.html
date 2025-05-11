@@ -8,19 +8,36 @@
   </head>
   <body>
     <!-- Login Page -->
-    <div class="container">
+    <div class="container" id="loginView">
       <h1>AKSV System</h1>
-      <input type="text" placeholder="ID" />
-      <input type="password" placeholder="PASSWORD" />
-      <div class="btn-row">
-        <button class="btn">Admin</button>
-        <button class="btn" id="signInBtn">Sign in</button>
-      </div>
+      <form id="loginForm">
+        <input type="text" id="loginId" placeholder="ID" required />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="PASSWORD"
+          required />
+        <div class="btn-row">
+          <button type="submit" class="btn">Sign in</button>
+          <!-- Admin button removed to restrict access -->
+        </div>
+      </form>
       <div class="nav">
         <button class="nav-btn">Home</button>
         <div class="divider"></div>
         <button class="nav-btn">Profile</button>
       </div>
+    </div>
+    <!-- Create/Edit Item Form -->
+    <div class="item-form-container hidden" id="itemFormView">
+      <button class="back-btn" id="backToEventsBtn">← Back to Events</button>
+      <h2 id="formTitle">Create Item</h2>
+      <form id="itemForm">
+        <input type="text" id="itemName" placeholder="Name" required />
+        <textarea id="itemDescription" placeholder="Description"></textarea>
+        <button type="submit" class="btn">Save</button>
+      </form>
+      <div id="formError" class="error-message"></div>
     </div>
 
     <!-- Event List Page -->
@@ -63,6 +80,38 @@
           Profile
         </button>
       </div>
+    </div>
+
+    <!-- Admin Section -->
+    <div class="admin-container hidden" id="adminView">
+      <button class="back-btn" id="backToLoginFromAdminBtn">
+        ← Back to Login
+      </button>
+      <h2>Admin Section</h2>
+
+      <section id="adminCreateEventSection">
+        <h3>Create Event</h3>
+        <form id="adminCreateEventForm">
+          <input
+            type="text"
+            id="adminEventName"
+            placeholder="Event Name"
+            required />
+          <textarea
+            id="adminEventDescription"
+            placeholder="Event Description"></textarea>
+          <button type="submit" class="btn">Create Event</button>
+        </form>
+        <div id="adminCreateEventError" class="error-message"></div>
+      </section>
+
+      <section id="adminViewVolunteersSection">
+        <h3>View Volunteers Joined</h3>
+        <select id="adminEventSelect">
+          <option value="">Select Event</option>
+        </select>
+        <ul id="adminVolunteerList"></ul>
+      </section>
     </div>
 
     <!-- Home Page -->
