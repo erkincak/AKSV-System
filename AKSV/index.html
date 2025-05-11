@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKSV System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Login Page -->
+    <div class="container">
+      <h1>AKSV System</h1>
+      <input type="text" placeholder="ID" />
+      <input type="password" placeholder="PASSWORD" />
+      <div class="btn-row">
+        <button class="btn">Admin</button>
+        <button class="btn" id="signInBtn">Sign in</button>
+      </div>
+      <div class="nav">
+        <button class="nav-btn">Home</button>
+        <div class="divider"></div>
+        <button class="nav-btn">Profile</button>
+      </div>
+    </div>
+
+    <!-- Event List Page -->
+    <div class="event-list-container hidden" id="eventListView">
+      <button class="back-btn" onclick="goBackToLogin()">←</button>
+
+      <div class="event-card" onclick="openEventDetail()">
+        <div class="event-header">Children Art WORKSHOP</div>
+        <img src="https://via.placeholder.com/300x180" alt="Event" />
+      </div>
+
+      <div class="event-card" onclick="openEventDetail()">
+        <div class="event-header">Doğa gezisi</div>
+        <img src="https://via.placeholder.com/300x180" alt="Event" />
+      </div>
+
+      <div class="nav">
+        <button class="nav-btn">Home</button>
+        <div class="divider"></div>
+        <button class="nav-btn">Profile</button>
+      </div>
+    </div>
+    <!-- Event Detail Page -->
+    <div class="event-detail-container hidden" id="eventDetailView">
+      <button class="back-btn" onclick="showView('eventListView')">←</button>
+
+      <h2 id="eventDetailTitle">Event Title</h2>
+      <p id="eventDetailDescription">Event description will appear here.</p>
+
+      <div class="date-list" id="eventDateList">
+        <!-- Dates will be inserted here by JavaScript -->
+      </div>
+
+      <button class="join-btn" id="joinEventBtn">JOIN</button>
+
+      <div class="nav">
+        <button class="nav-btn" onclick="showView('homeView')">Home</button>
+        <div class="divider"></div>
+        <button class="nav-btn" onclick="showView('profileView')">
+          Profile
+        </button>
+      </div>
+    </div>
+
+    <!-- Home Page -->
+    <div class="home-container hidden" id="homeView">
+      <h1>Children Art WORKSHOP</h1>
+      <p>Ihafta boyunca etkinligimize gönülüller aranıyordur.</p>
+      <div class="nav">
+        <button class="nav-btn active">Home</button>
+        <div class="divider"></div>
+        <button class="nav-btn" onclick="showView('profileView')">
+          Profile
+        </button>
+      </div>
+    </div>
+
+    <!-- Profile Page -->
+    <div class="profile-container hidden" id="profileView">
+      <h1>User Profile</h1>
+      <div class="profile-info">
+        <p>Name: User</p>
+        <p>Email: user@example.com</p>
+      </div>
+      <div class="nav">
+        <button class="nav-btn" onclick="showView('homeView')">Home</button>
+        <div class="divider"></div>
+        <button class="nav-btn active">Profile</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

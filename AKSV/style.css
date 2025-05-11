@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #7e79a8;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.container,
+.event-list-container,
+.event-detail-container,
+.home-container,
+.profile-container {
+  background-color: #7e79a8;
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.btn {
+  flex: 1;
+  background-color: lime;
+  color: black;
+  padding: 12px;
+  margin: 0 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.nav-btn {
+  background-color: #666;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+
+.divider {
+  width: 4px;
+  height: 40px;
+  background-color: black;
+  margin: 0 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.event-card {
+  background-color: #ffd54f;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.event-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.event-detail-container {
+  color: white;
+}
+
+.date-list {
+  margin: 20px 0;
+}
+
+.date-item {
+  background-color: #5d5691;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.join-btn {
+  background-color: lime;
+  color: black;
+  padding: 15px 30px;
+  border: none;
+  font-size: 18px;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-info {
+  background-color: #5d5691;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.active {
+  background-color: lime;
+  color: black;
+}
+
+.error-message {
+  color: #ff6b6b;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .container,
+  .event-list-container,
+  .event-detail-container {
+    padding: 15px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
